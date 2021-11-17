@@ -9,7 +9,7 @@ import (
 func form(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":		
-		 http.ServeFile(w, r, "index.html")
+		 http.ServeFile(w, r, "index.html");
 	case "POST":
 		firstName := r.FormValue("fname");
 		lastName  := r.FormValue("lname");
