@@ -13,13 +13,13 @@ func form(w http.ResponseWriter, r *http.Request) {
 	case "POST":
 		firstName := r.FormValue("fname");
 		lastName  := r.FormValue("lname");
-		fmt.Printf("firstName = %s\n", firstName)
-		fmt.Printf("lastName = %s\n", lastName)
+		fmt.Printf("firstName = %s\n", firstName);
+		fmt.Printf("lastName = %s\n", lastName);
 	}
 }
 
 func main() {
-	http.HandleFunc("/", form)
+	http.HandleFunc("/", form);
 
-	log.Fatal(http.ListenAndServe(":9000", nil))
+	log.Fatal(http.ListenAndServe(":9000", nil));
 }
